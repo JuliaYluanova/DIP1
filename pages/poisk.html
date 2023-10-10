@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>Скан</title>
+  
+</head>
+<body>
+ <header class="header">
+    <div class="container header-content">
+<nav>
+<ul class="header-navigation">
+    <li class="icons_header"><img src="../icons/Skan_Header.svg"></li>
+    <li class="header-navigation_item"><a href="../auth/index.html">Главная</a></li>
+    <li class="header-navigation_item"><a href="./Tarif.html">Тарифы</a></li>
+    <li class="header-navigation_item0"><a href="./FAQ.html">FAQ</a></li>
+    <li class="card3"><img src="../icons/icons8-спиннер,-кадр-5-100 1.svg" class="loader" id="loader" alt="Прелоадер"></li>
+    <li class="header-navigation_item2">Алексей.А</li>
+    <li class="header-navigation_item3"><a href="../index.html">Выйти</a></li>
+    <li class="liso"><img src="../icons/Лицо.svg"></li>
+</ul>
+</nav>
+</div>
+ </header> 
+ <main>
+    <div class="hero">
+        <div class="container hero-container-6">
+        <h1 class="title six">Найдите необходимые данные в пару кликов.</h1>
+        <p class="title title_one seven">Задайте параметры поиска.<br>Чем больше заполните, тем точнее поиск</p>
+
+
+
+
+
+        <div class="card-container">
+    <div class="card6">
+    <form class="search-form" id="search-form" action="objectsearch/histograms" method="POST">
+        <div class="form-group1">
+            <label for="inn" align="left">ИНН компании *</label>
+            <div class="input-wrapper">
+                <input type="text" id="inn" name="inn" required pattern="[0-9]{10}" maxlength="10" placeholder="10 цифр">
+            </div>
+        </div>
+    <div class="form-group2">
+        <label for="tonality" align="left">Тональность</label>
+        <select id="tonality" name="tonality" required>
+            <option value="any">Любая</option>
+<option value="positive">Позитивная</option>
+            <option value="negative">Негативная</option>
+        </select>
+    </div>
+    <div class="form-group3">
+            <label for="document-count" align="left">Количество документов в выдаче *</label>
+    <input type="number" id="document-count" name="document-count" required min="1" max="1000" placeholder="От 1 до 1000">
+        </div>   
+        <div class="date-range">
+            <label align="left" >Диапазон поиска *</label>
+            <input type="text" id="start-date" name="start-date" placeholder="Дата начала">
+            <input type="text" id="end-date" name="end-date"  placeholder="Дата конца">
+            <p class="error-message" style="display: none;">Введите корректные данные</p>
+        </div>
+        <button class="button button_six" type="submit" id="search-button" disabled>Поиск</button>
+        <p class="error-message">* Обязательные к заполнению поля</p>
+    </form>
+
+
+        <div class=" form-group-right  form-group9">
+            <input type="checkbox" id="max-completeness" name="max-completeness">
+                    <label><NOBR>Признак максимальной полноты</NOBR></label>
+        </div>
+        <div class=" form-group-right  form-group7">   
+            <input type="checkbox" id="business-mentions" name="business-mentions">
+        <label><NOBR>Упоминания в бизнес-контексте</NOBR></label>
+        </div>
+
+        <div class="form-group-right  form-group8">
+        <input type="checkbox" id="main-role" name="main-role">
+<label  class="right-label"><NOBR>Главная роль в публикации</NOBR></label>
+    </div>   
+
+            <div class="form-group-right   form-group0">
+                <input type="checkbox" id="risk-factors" name="risk-factors">
+                <label><NOBR>Публикации только с риск-факторами</NOBR></label>
+
+            </div>
+            <div class="form-group-right   form-group5">
+                <input type="checkbox" id="tech-news" name="tech-news">
+                <label><NOBR>Включать технические новости рынков</NOBR></label>
+             
+            </div>
+            <div class="form-group-right  form-group6">
+                <input type="checkbox" id="announcements" name="announcements">
+                <label><NOBR>Включать анонсы и календари</NOBR></label>
+    </div>   
+
+    <div class="form-group-right form-group10">
+        <input type="checkbox" id="news-summary" name="news-summary">
+        <label><NOBR>Включать сводки новостей</NOBR></label>
+    </div>
+    
+  
+        
+            
+    
+   
+</form>
+   
+</div>
+</div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="Document">
+            <img src="../icons/Document.svg" alt="Document"> 
+    </div>
+            <div class="papka">
+                <img src="../icons/Папки.svg" alt="papka"> 
+        </div>
+        <div class="naiti">
+            <img src="../icons/Найти данные.svg" alt="naiti"> 
+    </div> 
+</div>
+</div>
+</main> 
+<footer class="footer">
+   <div class="container footer-content">
+     <div class="footer-navigation">
+              <ul><li class="icons_footer"><img src="../icons/eqw 1.svg"></li></ul>
+              <div class="footer-cool">
+               <ul><li class="footer-navigation_item"><p class="right">г. Москва, Цветной б-р, 40 <br> +7 495 771 21 11<br> info@skan.ru</li></p>
+               <li class="footer-navigation_item1"><p class="right1">Copyright. 2022</li></p></ul>
+               </div>
+     </div>
+     </div>
+   </div> 
+</footer>
+
+
+
+
+
+<script>
+      const form = document.getElementById('search-form');
+const innInput = document.getElementById('inn');
+const tonalitySelect = document.getElementById('tonality');
+const documentCountInput = document.getElementById('document-count');
+const errorMessage = document.querySelector('.error-message');
+const searchButton = document.getElementById('search-button');
+const startDateSelect = document.getElementById('start-date');
+const endDateSelect = document.getElementById('end-date');
+
+// Функция для проверки валидности формы
+function isFormValid() {
+    const isINNValid = innInput.checkValidity();
+    const isDateRangeValid = startDateSelect.value !== "" && endDateSelect.value !== "";
+    
+   
+const isDocumentCountValid = documentCountInput.checkValidity();
+    
+    
+    
+return isINNValid && isDateRangeValid && isDocumentCountValid;
+}
+
+// Функция для включения/выключения кнопки поиска в зависимости от валидности формы
+function toggleSearchButton() {
+    searchButton.disabled = !isFormValid();
+    errorMessage.style.display = isFormValid() ? 'none' : 'block';
+}
+
+// Обработчики событий для элементов формы
+innInput.addEventListener('input', toggleSearchButton);
+tonalitySelect.
+tonalitySelect
+
+ton
+addEventListener('input', toggleSearchButton);
+startDateSelect.
+startDateSelect
+addEventListener('input', toggleSearchButton);
+endDateSelect.addEventListener('input', toggleSearchButton);
+documentCountInput.addEventListener('input', toggleSearchButton);
+
+// Вызываем toggleSearchButton при загрузке страницы для инициализации состояния кнопки
+toggleSearchButton();
+
+ // Ваш JavaScript-код, который использует jQuery и jQuery UI
+ $(document).ready(function () {
+    const startDateInput = $("#start-date");
+    const endDateInput = $("#end-date");
+    const errorMessage = $(".error-message");
+    const searchButton = $("#search-button");
+
+    function isDateValid() {
+        const startDate = startDateInput.val();
+        
+       
+const endDate = endDateInput.val();
+        const currentDate = new Date().toISOString().split('T')[0]; // Get current date in YYYY-MM-DD format
+
+        return startDate !== "" && endDate !== "" &&
+            startDate <= currentDate && endDate <= currentDate && startDate <= endDate;
+    }
+
+    
+            startDate <= currentDate && endDate <=
+
+            startDate <= currentDate && endDate
+
+            startDate <= currentDate &&
+function toggleSearchButton() {
+        searchButton.
+        search
+prop("disabled", !isDateValid());
+        errorMessage.
+        errorMessage
+css("display", isDateValid() ? "none" : "block");
+    }
+
+    startDateInput.
+   
+on("input", toggleSearchButton);
+    endDateInput.on("input", toggleSearchButton);
+
+    $("#search-form").submit(function (event) {
+        
+       
+if (!isDateValid()) {
+            event.
+           
+preventDefault();
+            errorMessage.
+           
+css("display", "block");
+        }
+    });
+});
+    
+
+
+
+
+</script>
+
+</body>
+</html>
